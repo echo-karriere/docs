@@ -16,6 +16,10 @@ theme:
 
 nav:
   - Home: index.md
+  - Frontend: index.md
+  - Backend: index.md
+  - Resources:
+      - Learning: resources/learning.md
 
 extra:
   social:
