@@ -1,0 +1,28 @@
+site_name: echo karriere documentation
+site_url: https://docs.echokarriere.no
+site_description: >
+  Documentation for the development and maintenance of echo karriere
+  and its services, products etc.
+
+repo_url: https://github.com/echo-karriere/echo-karriere.github.io/
+theme:
+  name: material
+  logo: assets/logo.png
+  favicon: assets/favicon.png
+  features:
+    - instant
+    - navigation.expand
+    - tabs
+
+nav:
+  - Home: index.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/echo-karriere
+    - icon: fontawesome/brands/facebook
+      link: https://www.facebook.com/echokarriere
+
+plugins:
+  - search
