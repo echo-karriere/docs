@@ -22,6 +22,9 @@
 - **Git**: A good introduction for how to develop with Git is [Learn Git
   Branching][learn-git]. You should also read the short introduction to [Trunk
   Based Development][trunk] for an overview of how we want to work.
+- **Docker**: There's a sweet and short [introduction][docker] on their
+  websites, though I recommend at least skimming [Docker Curriculum][docker-cur]
+  (especially the Multi Container Environments section).
 
 [koans]: https://www.jetbrains.com/help/education/learner-start-guide.html?section=Kotlin%20Koans
 [jetbrains]: https://www.jetbrains.com/shop/eform/students
@@ -36,3 +39,5 @@
 [swapi]: https://graphql.org/swapi-graphql/?query=%7B%0A%20%20allFilms%20%7B%0A%20%20%20%20edges%20%7B%0A%20%20%20%20%20%20node%20%7B%0A%20%20%20%20%20%20%20%20title%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A
 [learn-git]: https://learngitbranching.js.org/
 [trunk]: https://trunkbaseddevelopment.com/
+[docker]: https://docs.docker.com/get-started/
+[docker-cur]: https://docker-curriculum.com/
