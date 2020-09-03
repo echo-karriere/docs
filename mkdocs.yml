@@ -16,6 +16,8 @@ theme:
 
 nav:
   - Home: index.md
+  - Common:
+      - Git: common/git.md
   - Frontend:
       - Editors: frontend/editors.md
   - Backend: 
@@ -52,8 +54,7 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
-  - pymdownx.highlight:
-      linenums: true
+  - pymdownx.highlight
   - pymdownx.inlinehilite
   - pymdownx.keys
   - pymdownx.magiclink:
