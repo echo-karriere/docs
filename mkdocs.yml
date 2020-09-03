@@ -20,6 +20,7 @@ nav:
       - Editors: frontend/editors.md
   - Backend: 
       - Editors: backend/editors.md
+      - Docker: backend/docker.md
   - Resources:
       - Learning: resources/learning.md
 
