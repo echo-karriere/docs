@@ -4,7 +4,7 @@ site_description: >
   Documentation for the development and maintenance of echo karriere
   and its services, products etc.
 
-repo_url: https://github.com/echo-karriere/echo-karriere.github.io/
+repo_url: https://github.com/echo-karriere/docs/
 theme:
   name: material
   logo: assets/logo.png
