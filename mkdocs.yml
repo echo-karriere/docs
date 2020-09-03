@@ -16,7 +16,8 @@ theme:
 
 nav:
   - Home: index.md
-  - Frontend: index.md
+  - Frontend:
+      - Editors: frontend/editors.md
   - Backend: index.md
   - Resources:
       - Learning: resources/learning.md
