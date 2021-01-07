@@ -11,54 +11,105 @@ in one of the JetBrains' products.
 It's recommended that you're somewhat familiar with working with `git` before
 reading this documentation, see our [learning resources](/resources/learning/)
 for a short introduction. What follows is a fairly quick introduction to how to
-use issues from the project board and automatically close it with a pull request
-in GitHub.
+use issues from Clubhouse, creating a new branch and a pull request to getting
+it merged. Aka the full flow of the workflow.
 
 ### Selecting an issue
 
-Look at the top of the issue board on GitHub for an available task in the `To
-do` column, the higher it is the more prioritized it is, so it's prefered that
-you try to select relevant issues from as high as possible.
+Start by looking for relevant issues on the story board, and then prioritize
+issues with labels. You can filter there views in the sidebar by creating a
+filter of what you want to show, e.g. only stories for the frontend project with
+a label of `high` or `medium` importance.
+
+Once you've found an issue in the `Ready for Development` column you can
+drag-and-drop it into the `In Development` column. This will automatically
+assign the story to you.
+
+!!! note 
+    Be careful to only select from the `Ready for Development` column, the
+    `Unscheduled` column is for stories that are not yet ready to start on.
 
 <figure>
-  <img src="/images/git-select.png" />
-  <figcaption>Selecting an issue</figcaption>
+  <img src="/images/clubhouse-find-issue.png" />
+  <figcaption>Finding an issue</figcaption>
 </figure>
 
-Once you've found a relevant issue, assign yourself by clicking the `assign
-yourself` text, it should now display your avatar and name.
+Once you've found a relevant issue and dragged it to the correct column, you
+will be assigned as the author for this story and you are now ready to start
+working on it.
 
 <figure>
-  <img src="/images/git-assign.png" />
-  <figcaption>Assigning yourself to an issue</figcaption>
+  <img src="/images/clubhouse-drag-n-drop.png" />
+  <figcaption>You're now ready to start developing</figcaption>
 </figure>
 
 ### Working locally
 
-Now you're ready to start working on the issue locally, to do so check out the
-repository on your machine and create a new branch with a relevant name for what
-you're working on: `git checkout -b add-git-documentation`. After a while you
-might be ready to commit your changes so you run `git status` to see what has
-changed and what hasn't:
+Now you're ready to start working on the issue locally. The first thing to do is
+to make sure you're on the `master` branch of the repository and that you have a
+clean slate and that you're up to date with the `origin`.
+
+!!! tip
+    Use the following commands to get started:
+    
+    ``` git
+    ❯ git checkout master
+    Switched to branch 'master'
+    Your branch is behind 'origin/master' by 26 commits, and can be fast-forwarded.
+      (use "git pull" to update your local branch)
+    ```
+    
+    Then run `git pull` to get the latest changes, if you have files that are not
+    yet committed or you want to remove, you can either stash them or run `git
+    checkout -- <filename>` to erase the local changes.
+    
+    ``` git 
+    ❯ git status
+    On branch master
+    Your branch is up to date with 'origin/master'.
+
+    nothing to commit, working tree clean
+    ```
+    
+    You are now ready to begin.
+    
+Next, select the story to be taken into the details view and click on the `git`
+helper in the upper right corner.
+
+<figure>
+  <img src="/images/clubhouse-git-helper.png" />
+  <figcaption>Helper menu</figcaption>
+</figure>
+
+Copy the contents of the bottom text area and paste it into your terminal. If
+you're using a GUI, copy the proper branch name from the upper text area and use
+it to create a new branch.
+
+``` git
+❯ git checkout -b feature/ch92/update-documentation
+Switched to a new branch 'feature/ch92/update-documentation'
+```
+
+You can now start working on your feature/bug fix.
 
 ``` git 
 ❯ git status
-On branch add-git-documentation
+On branch feature/ch92/update-documentation
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
   (use "git restore <file>..." to discard changes in working directory)
-	modified:   mkdocs.yml
+	modified:   docs/common/git.md
 
 Untracked files:
   (use "git add <file>..." to include in what will be committed)
-	docs/common/
-	docs/images/git-assign.png
-	docs/images/git-select.png
+	docs/images/clubhouse-drag-n-drop.png
+	docs/images/clubhouse-find-issue.png
+	docs/images/clubhouse-git-helper.png
 
 no changes added to commit (use "git add" and/or "git commit -a")
 ```
 
-Here we can see that `mkdocs.yml` has been changed and that there are at least
+Here we can see that `git.md` file has been changed and that there are at least
 three new untracked files (i.e. files that did not exist before this commit). If
 you think everything is fine you can add everything, but this is not a healthy
 habit as you *will* end up accidentally adding and pushing things you didn't
