@@ -190,11 +190,33 @@ request. It will look something like this:
   <figcaption>The pull request view</figcaption>
 </figure>
 
-You should also assign the PR to yourself. Next up is adding someone to review
-your code, this should happen automatically once people start committing code,
-but you can manually assign someone to the pull request. In this case I'll add
-Marie as a reviewer. Your reviewer will look over the code and might come with
-suggestions or request changes.
+You should also assign the PR to yourself. 
+
+If we now go back to Clubhouse, we'll see that the story has been moved to the
+`Ready for Review` column:
+
+<figure>
+  <img src="/images/clubhouse-ready-review.png" />
+</figure>
+
+The detailed view for the story should also reflect the new PR and commit:
+
+<figure>
+  <img src="/images/clubhouse-branches-commits.png" />
+  <figcaption>You can see the linked branch with its PR and the commit we made.</figcaption>
+</figure>
+
+And the PR on GitHub will also link back to Clubhouse.
+
+<figure>
+  <img src="/images/github-pr-reference.png" />
+  <figcaption>On GitHub we can see that the story reference in the brackets is a link.</figcaption>
+</figure>
+
+Next up is adding someone to review your code, this should happen automatically 
+once people start committing code, but you can manually assign someone to the 
+pull request. In this case I'll add Marie as a reviewer. Your reviewer will 
+look over the code and might come with suggestions or request changes.
 
 <figure>
   <img src="/images/github-add-reviewer.png" />
@@ -211,24 +233,9 @@ Time to hash it out by discussing why you did things the way you did.
     Just remember to be nice. Code reviews can feel personal and intimidating, but it's
     done both to learn and help our code stay maintainable.
     
-If we now go back to Clubhouse, we'll see that the story has been moved to the
-`Ready for Review` column:
-
-<figure>
-  <img src="/images/clubhouse-ready-review.png" />
-</figure>
-<figure>
-  <img src="/images/clubhouse-branches-commits.png" />
-  <figcaption>You can see the linked branch with its PR and the commit we made.</figcaption>
-</figure>
-<figure>
-  <img src="/images/github-pr-reference.png" />
-  <figcaption>On GitHub we can see that the story reference in the brackets is a link.</figcaption>
-</figure>
-
-Once you're done with the requested changes, you can ask the
-person to review the pull request again. Or you might skip this entire step if
-everything looks peachy and the pull request is approved immediately.
+Once you're done with the requested changes, you can ask the person to review 
+the pull request again. Or you might skip this entire step if everything looks 
+peachy and the pull request is approved immediately.
 
 <figure>
   <img src="/images/github-review-approved.png" />
