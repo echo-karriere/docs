@@ -12,7 +12,7 @@ theme:
   features:
     - instant
     - navigation.expand
-    - tabs
+    - navigation.tabs
 
 nav:
   - Home: index.md
