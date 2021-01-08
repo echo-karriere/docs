@@ -18,6 +18,7 @@ nav:
   - Home: index.md
   - Common:
       - Git: common/git.md
+      - Committing: common/commit-messages.md
   - Frontend:
       - Editors: frontend/editors.md
   - Backend: 

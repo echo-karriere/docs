@@ -140,8 +140,8 @@ using the `-m` flag: `git commit -m "Message"`.
 
 
 ```git
-❯ git commit -m "Update documentation for Clubhouse [ch-92]"
-[feature/ch92/update-documentation 7440b10] Update documentation for Clubhouse [ch-92]
+❯ git commit -m "[CH-92]: Update documentation for Clubhouse"
+[feature/ch92/update-documentation 7440b10] [CH-92]: Update documentation for Clubhouse
  4 files changed, 73 insertions(+), 22 deletions(-)
  create mode 100644 docs/images/clubhouse-drag-n-drop.png
  create mode 100644 docs/images/clubhouse-find-issue.png
@@ -149,13 +149,7 @@ using the `-m` flag: `git commit -m "Message"`.
 ```
 
 !!! warning 
-    To create references from a commit to a story on Clubhouse you can
-    use the following syntax: Write the commit message like normal and the
-    append `[ch-<num>]` to the end of the commit. This will then create a link
-    from GitHub to Clubhouse so we can easily navigate between them. **NOTE:**
-    The commit helper uses the wrong format, it is missing the dash between `ch`
-    and the issue number. This comes from a limitation for linked issues on
-    GitHub.
+    Read the [commit documentation](./commit-messages.md) on how to structure your commits.
    
 ### Pushing
    
