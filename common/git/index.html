@@ -1,0 +1,1021 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation for the development and maintenance of echo karriere and its services, products etc.
+">
+      
+      
+      
+      
+        <link rel="canonical" href="https://docs.echokarriere.no/common/git/">
+      
+      <link rel="shortcut icon" href="../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.5">
+    
+    
+      
+        <title>Git - echo karriere documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.77f3fd56.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.7fa14f5b.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#git" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="https://docs.echokarriere.no" title="echo karriere documentation" class="md-header__button md-logo" aria-label="echo karriere documentation">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            echo karriere documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Git
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="md-header__options">
+      
+    </div>
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/echo-karriere/docs/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="./" class="md-tabs__link md-tabs__link--active">
+        Common
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../frontend/editors/" class="md-tabs__link">
+        Frontend
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../backend/editors/" class="md-tabs__link">
+        Backend
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../resources/learning/" class="md-tabs__link">
+        Resources
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://docs.echokarriere.no" title="echo karriere documentation" class="md-nav__button md-logo" aria-label="echo karriere documentation">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    echo karriere documentation
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/echo-karriere/docs/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      <label class="md-nav__link" for="__nav_2">
+        Common
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Common" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Common
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Git
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Git
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tools" class="md-nav__link">
+    Tools
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workflow" class="md-nav__link">
+    Workflow
+  </a>
+  
+    <nav class="md-nav" aria-label="Workflow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#selecting-an-issue" class="md-nav__link">
+    Selecting an issue
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#working-locally" class="md-nav__link">
+    Working locally
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#committing" class="md-nav__link">
+    Committing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pushing" class="md-nav__link">
+    Pushing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pull-requests-and-clubhouse" class="md-nav__link">
+    Pull requests and Clubhouse
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-end" class="md-nav__link">
+    The end
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../commit-messages/" class="md-nav__link">
+        Committing
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" data-md-state="indeterminate" type="checkbox" id="__nav_3" checked>
+      
+      <label class="md-nav__link" for="__nav_3">
+        Frontend
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Frontend" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Frontend
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../frontend/editors/" class="md-nav__link">
+        Editors
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" data-md-state="indeterminate" type="checkbox" id="__nav_4" checked>
+      
+      <label class="md-nav__link" for="__nav_4">
+        Backend
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Backend" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Backend
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backend/editors/" class="md-nav__link">
+        Editors
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backend/docker/" class="md-nav__link">
+        Docker
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" data-md-state="indeterminate" type="checkbox" id="__nav_5" checked>
+      
+      <label class="md-nav__link" for="__nav_5">
+        Resources
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Resources" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Resources
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/learning/" class="md-nav__link">
+        Learning
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tools" class="md-nav__link">
+    Tools
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workflow" class="md-nav__link">
+    Workflow
+  </a>
+  
+    <nav class="md-nav" aria-label="Workflow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#selecting-an-issue" class="md-nav__link">
+    Selecting an issue
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#working-locally" class="md-nav__link">
+    Working locally
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#committing" class="md-nav__link">
+    Committing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pushing" class="md-nav__link">
+    Pushing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pull-requests-and-clubhouse" class="md-nav__link">
+    Pull requests and Clubhouse
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-end" class="md-nav__link">
+    The end
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/echo-karriere/docs/edit/master/docs/common/git.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="git">Git<a class="headerlink" href="#git" title="Permanent link">&para;</a></h1>
+<h2 id="tools">Tools<a class="headerlink" href="#tools" title="Permanent link">&para;</a></h2>
+<p>This tutorial will use the command line to work through the example, though this
+could just as easily be done with the integrated <code>git</code> tools in either VSCode or
+in one of the JetBrains' products.</p>
+<h2 id="workflow">Workflow<a class="headerlink" href="#workflow" title="Permanent link">&para;</a></h2>
+<p>It's recommended that you're somewhat familiar with working with <code>git</code> before
+reading this documentation, see our <a href="/resources/learning/">learning resources</a>
+for a short introduction. What follows is a fairly quick introduction to how to
+use issues from Clubhouse, creating a new branch and a pull request to getting
+it merged. Aka the full flow of the workflow.</p>
+<h3 id="selecting-an-issue">Selecting an issue<a class="headerlink" href="#selecting-an-issue" title="Permanent link">&para;</a></h3>
+<p>Start by looking for relevant issues on the story board, and then prioritize
+issues with labels. You can filter there views in the sidebar by creating a
+filter of what you want to show, e.g. only stories for the frontend project with
+a label of <code>high</code> or <code>medium</code> importance.</p>
+<p>Once you've found an issue in the <code>Ready for Development</code> column you can
+drag-and-drop it into the <code>In Development</code> column. This will automatically
+assign the story to you.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Be careful to only select from the <code>Ready for Development</code> column, the
+<code>Unscheduled</code> column is for stories that are not yet ready to start on.</p>
+</div>
+<figure>
+  <img src="/images/clubhouse-find-issue.png" />
+  <figcaption>Finding an issue</figcaption>
+</figure>
+
+<p>Once you've found a relevant issue and dragged it to the correct column, you
+will be assigned as the author for this story and you are now ready to start
+working on it.</p>
+<figure>
+  <img src="/images/clubhouse-drag-n-drop.png" />
+  <figcaption>You're now ready to start developing</figcaption>
+</figure>
+
+<h3 id="working-locally">Working locally<a class="headerlink" href="#working-locally" title="Permanent link">&para;</a></h3>
+<p>Now you're ready to start working on the issue locally. The first thing to do is
+to make sure you're on the <code>master</code> branch of the repository and that you have a
+clean slate and that you're up to date with the <code>origin</code>.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Use the following commands to get started:</p>
+<div class="highlight"><pre><span></span><code>❯ git checkout master
+Switched to branch &#39;master&#39;
+Your branch is behind &#39;origin/master&#39; by 26 commits, and can be fast-forwarded.
+  (use &quot;git pull&quot; to update your local branch)
+</code></pre></div>
+<p>Then run <code>git pull</code> to get the latest changes, if you have files that are not
+yet committed or you want to remove, you can either stash them or run <code>git
+checkout -- &lt;filename&gt;</code> to erase the local changes.</p>
+<div class="highlight"><pre><span></span><code>❯ git status
+On branch master
+Your branch is up to date with &#39;origin/master&#39;.
+
+nothing to commit, working tree clean
+</code></pre></div>
+<p>You are now ready to begin.</p>
+</div>
+<p>Next, select the story to be taken into the details view and click on the <code>git</code>
+helper in the upper right corner.</p>
+<figure>
+  <img src="/images/clubhouse-git-helper.png" />
+  <figcaption>Helper menu</figcaption>
+</figure>
+
+<p>Copy the contents of the bottom text area and paste it into your terminal. If
+you're using a GUI, copy the proper branch name from the upper text area and use
+it to create a new branch.</p>
+<div class="highlight"><pre><span></span><code>❯ git checkout -b feature/ch92/update-documentation
+Switched to a new branch &#39;feature/ch92/update-documentation&#39;
+</code></pre></div>
+<p>You can now start working on your feature/bug fix.</p>
+<div class="highlight"><pre><span></span><code>❯ git status
+On branch feature/ch92/update-documentation
+Changes not staged for commit:
+  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)
+  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)
+    modified:   docs/common/git.md
+
+Untracked files:
+  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)
+    docs/images/clubhouse-drag-n-drop.png
+    docs/images/clubhouse-find-issue.png
+    docs/images/clubhouse-git-helper.png
+
+no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)
+</code></pre></div>
+<p>Here we can see that <code>git.md</code> file has been changed and that there are at least
+three new untracked files (i.e. files that did not exist before this commit). If
+you think everything is fine you can add everything, but this is not a healthy
+habit as you <em>will</em> end up accidentally adding and pushing things you didn't
+mean to.</p>
+<p>We will be risky and add everything at once; <code>git add .</code>. Running <code>git status</code>
+again now shows that we have changes added.</p>
+<div class="highlight"><pre><span></span><code>❯ git status
+On branch feature/ch92/update-documentation
+Changes to be committed:
+  (use &quot;git restore --staged &lt;file&gt;...&quot; to unstage)
+    modified:   docs/common/git.md
+    new file:   docs/images/clubhouse-drag-n-drop.png
+    new file:   docs/images/clubhouse-find-issue.png
+    new file:   docs/images/clubhouse-git-helper.png
+</code></pre></div>
+<h3 id="committing">Committing<a class="headerlink" href="#committing" title="Permanent link">&para;</a></h3>
+<p>We can now commit our changes and push them to a new branch on the remote
+server. You can either commit by running <code>git commit</code> and it'll open a window of
+whatever <code>$EDITOR</code> is set to on your OS or from the application that you're
+using (VSCode, WebStorm etc). On Linux it'll either open in <code>nano</code> or in <code>vim</code>
+for example, while on macOS it might be something else. Or you can commit by
+using the <code>-m</code> flag: <code>git commit -m "Message"</code>.</p>
+<div class="highlight"><pre><span></span><code>❯ git commit -m &quot;[CH-92]: Update documentation for Clubhouse&quot;
+[feature/ch92/update-documentation 7440b10] [CH-92]: Update documentation for Clubhouse
+ 4 files changed, 73 insertions(+), 22 deletions(-)
+ create mode 100644 docs/images/clubhouse-drag-n-drop.png
+ create mode 100644 docs/images/clubhouse-find-issue.png
+ create mode 100644 docs/images/clubhouse-git-helper.png
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Read the <a href="../commit-messages/">commit documentation</a> on how to structure your commits.</p>
+</div>
+<h3 id="pushing">Pushing<a class="headerlink" href="#pushing" title="Permanent link">&para;</a></h3>
+<p>We're now ready to push to our repository and create a new pull request. Simply
+run <code>git push -u</code> to create the branch on your remote (aka GitHub).</p>
+<div class="highlight"><pre><span></span><code>❯ git push -u
+Enumerating objects: 14, done.
+Counting objects: 100% (14/14), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (9/9), 84.99 KiB | 17.00 MiB/s, done.
+Total 9 (delta 4), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (4/4), completed with 4 local objects.
+remote: 
+remote: Create a pull request for &#39;feature/ch92/update-documentation&#39; on GitHub by visiting:
+remote:      https://github.com/echo-karriere/docs/pull/new/feature/ch92/update-documentation
+remote: 
+To github.com:echo-karriere/docs.git
+ * [new branch]      feature/ch92/update-documentation -&gt; feature/ch92/update-documentation
+Branch &#39;feature/ch92/update-documentation&#39; set up to track remote branch &#39;feature/ch92/update-documentation&#39; from &#39;origin&#39;.
+</code></pre></div>
+<h3 id="pull-requests-and-clubhouse">Pull requests and Clubhouse<a class="headerlink" href="#pull-requests-and-clubhouse" title="Permanent link">&para;</a></h3>
+<p>You can use the link in the response from the <code>remote</code> to create the pull
+request. It will look something like this:</p>
+<figure>
+  <img src="/images/github-create-pr.png" />
+  <figcaption>The pull request view</figcaption>
+</figure>
+
+<p>You should also assign the PR to yourself. </p>
+<p>If we now go back to Clubhouse, we'll see that the story has been moved to the
+<code>Ready for Review</code> column:</p>
+<figure>
+  <img src="/images/clubhouse-ready-review.png" />
+</figure>
+
+<p>The detailed view for the story should also reflect the new PR and commit:</p>
+<figure>
+  <img src="/images/clubhouse-branches-commits.png" />
+  <figcaption>You can see the linked branch with its PR and the commit we made.</figcaption>
+</figure>
+
+<p>And the PR on GitHub will also link back to Clubhouse.</p>
+<figure>
+  <img src="/images/github-pr-reference.png" />
+  <figcaption>On GitHub we can see that the story reference in the brackets is a link.</figcaption>
+</figure>
+
+<p>Next up is adding someone to review your code, this should happen automatically 
+once people start committing code, but you can manually assign someone to the 
+pull request. In this case I'll add Marie as a reviewer. Your reviewer will 
+look over the code and might come with suggestions or request changes.</p>
+<figure>
+  <img src="/images/github-add-reviewer.png" />
+</figure>
+
+<p>In this case Marie requested some changes, which you may or may not agree with.
+Time to hash it out by discussing why you did things the way you did. </p>
+<figure>
+  <img src="/images/github-review.png" />
+</figure>
+
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Just remember to be nice. Code reviews can feel personal and intimidating, but it's
+done both to learn and help our code stay maintainable.</p>
+</div>
+<p>Once you're done with the requested changes, you can ask the person to review 
+the pull request again. Or you might skip this entire step if everything looks 
+peachy and the pull request is approved immediately.</p>
+<figure>
+  <img src="/images/github-review-approved.png" />
+</figure>
+
+<p>You are now ready to merge your pull request!</p>
+<figure>
+  <img src="/images/github-merge.png" />
+</figure>
+
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>Pay close attention to the type of merge you're doing! In this case
+it will automatically be a regular merge, we prefer rebasing over merging
+in our projects.</p>
+</div>
+<p>Select <code>Rebase and merge</code> from the dropdown to the right of the merge button. Or
+follow the instructions you are given in the pull request, occasionally we might
+want to squash instead if we have a bunch of temporary commits that we don't
+want to litter the history with.</p>
+<figure>
+  <img src="/images/github-merge-types.png" />
+</figure>
+
+<p>You'll be given a confirmation before merging so if you accidentally press the
+merge button, no worries. You might also be able to change the merge message,
+but this should be wholly unnessecary.</p>
+<figure>
+  <img src="/images/github-merge-confirm.png" />
+</figure>
+<figure>
+  <img src="/images/github-pr-post-merge.png" />
+</figure>
+
+<p>Once your pull request is merged the corresponding story on Clubhouse will move
+to the <code>Ready for Deploy</code> column. Then, once it goes live someone will move the
+story to the <code>Completed</code> column.</p>
+<figure>
+  <img src="/images/clubhouse-completed.png" />
+</figure>
+
+<h3 id="the-end">The end<a class="headerlink" href="#the-end" title="Permanent link">&para;</a></h3>
+<p>Huzzah, you have now gotten code into the main development branch, now go to the
+top and repeat <img alt="😄" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f604.svg" title=":smile:" /></p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        <a href="../.." class="md-footer__link md-footer__link--prev" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Home
+            </div>
+          </div>
+        </a>
+      
+      
+        <a href="../commit-messages/" class="md-footer__link md-footer__link--next" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Committing
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+        
+        
+      
+      <a href="https://github.com/echo-karriere" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+      </a>
+    
+      
+      
+        
+        
+      
+      <a href="https://www.facebook.com/echokarriere" target="_blank" rel="noopener" title="www.facebook.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["instant", "navigation.expand", "navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.fb4a9340.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.5cf3e710.min.js"></script>
+      
+    
+  </body>
+</html>

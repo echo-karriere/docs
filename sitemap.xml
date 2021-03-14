@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url>
+     <loc>https://docs.echokarriere.no/</loc>
+     <lastmod>2021-03-14</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://docs.echokarriere.no/common/git/</loc>
+     <lastmod>2021-03-14</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://docs.echokarriere.no/common/commit-messages/</loc>
+     <lastmod>2021-03-14</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://docs.echokarriere.no/frontend/editors/</loc>
+     <lastmod>2021-03-14</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://docs.echokarriere.no/backend/editors/</loc>
+     <lastmod>2021-03-14</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://docs.echokarriere.no/backend/docker/</loc>
+     <lastmod>2021-03-14</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://docs.echokarriere.no/resources/learning/</loc>
+     <lastmod>2021-03-14</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+</urlset>
